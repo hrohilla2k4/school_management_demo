@@ -1,0 +1,20 @@
+/* print.css */
+@media print {
+    /* Adjust font size */
+    body {
+      font-size: 30pt;
+      
+    }
+
+    .school-heading{
+        font-size: 50pt;
+    }
+  
+    /* Adjust margins */
+    .modal-content {
+       
+        top: 0;
+        right: 0;
+    }
+  }
+  

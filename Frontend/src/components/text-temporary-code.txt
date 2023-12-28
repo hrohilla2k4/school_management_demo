@@ -1,0 +1,80 @@
+import { useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
+
+const Adminpanel = () => {
+
+    const navigate = useNavigate();
+
+    const addTeacherHandle = () => {
+        navigate('/add_teacher');
+    }
+    const showTeacherHandle = () => {
+        navigate('/show_teachers');
+    }
+
+    const checkFeesHandle = () => {
+        navigate('/check_fees');
+    }
+
+    const acceptFees = () => {
+        navigate('/accept_fees')
+    }
+    const handleTeacherPanel = () => {
+        navigate('/teacher_panel')
+    }
+
+    const handleAddPeon = () => {
+        navigate('/add_peons')
+    }
+
+    const handlePayFees = () => {
+        navigate('/pay_salary')
+    }
+
+    const handleShowPeons = () => {
+        navigate('/show_peons')
+    }
+
+    const handleCheckSalaries = () => {
+        navigate('/check_salaries')
+    }
+    const handleExportData = () => {
+        navigate('/export_data')
+    }
+
+    return (
+        <div className="container">
+            <div className="row">
+                <div className="heading display-1 col">
+                    <p className="border bg-danger text-white text-center">Admin Panel</p> <br />
+
+                </div>
+            </div>
+
+            <br />
+
+            <div className="col-md-5 container">
+                <div className="row button">
+                    <div className="image col">
+                        <img src="/images/icon-admin-panel.png" alt="school image" width={200} height={200} />
+                    </div>
+                    <div className="col">
+                        <div className="col"><Button color="warning" variant="contained" onClick={addTeacherHandle}>Add teacher</Button></div>
+                        <div className="col mt-2"><Button color="info" variant="contained" onClick={handleAddPeon}>Add peons</Button></div>
+                        <div className="col mt-2"><Button color="warning" variant="contained" onClick={handleCheckSalaries} >Check Salaries</Button> </div>
+                        <div className="col mt-2"><Button color="info" variant="contained" onClick={checkFeesHandle}>Check Fees</Button></div>
+                        <div className="col mt-2"> <Button color="warning" variant="contained" onClick={showTeacherHandle}>Check existing teachers</Button></div>
+                        <div className="col mt-2"> <Button color="info" variant="contained" onClick={acceptFees}>Accept Fees</Button></div>
+                        <div className="col mt-2"> <Button color="warning" variant="contained" onClick={handleTeacherPanel}>Show Teacher Panel</Button></div>
+                        <div className="col mt-2"> <Button color="warning" variant="contained" onClick={handlePayFees}>Pay Salary</Button></div>
+                        <div className="col mt-2"> <Button color="warning" variant="contained" onClick={handleShowPeons}>Show Existing Peons</Button></div>
+                        <div className="col mt-2"> <Button color="warning" variant="contained" onClick={handleExportData}>Export Data</Button></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    )
+};
+
+export default Adminpanel;
